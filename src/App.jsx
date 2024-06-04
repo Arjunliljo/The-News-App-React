@@ -1,11 +1,12 @@
-import Footer from "./Components/PageComponents/Footer";
-import Header from "./Components/PageComponents/Header";
+import { Outlet } from "react-router-dom";
+import Footer from "./Components/PageComponents/Footer/Footer";
+import Header from "./Components/PageComponents/Header/Header";
 
-function App({ children }) {
+function App() {
   return (
     <>
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </>
   );

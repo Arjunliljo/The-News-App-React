@@ -1,0 +1,6 @@
+.secondaryHeading {
+  font-size: 4rem;
+  border-left: 10px solid var(--primery-color);
+  padding-left: 1rem;
+  margin-bottom: 4rem;
+}
