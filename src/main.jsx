@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
 import "./index.css";
-import Main from "./Components/PageComponents/UtilityComponents/Main.jsx";
 import Articles from "./Components/ArticlesComponents/Articles.jsx";
 import Article from "./Components/ArticlesComponents/Article.jsx";
 import Authors from "./Components/AuthorComponents/Authors.jsx";

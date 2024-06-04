@@ -1,10 +1,13 @@
 import Main from "../UtilityComponents/Main";
 import SecondaryHeading from "../UtilityComponents/SecondaryHeading";
+import IndexSectionOne from "./IndexSectionOne/IndexSectionOne";
 
 function IndexPage() {
   return (
     <Main>
-      <SecondaryHeading>Happening</SecondaryHeading>
+      <IndexSectionOne>
+        <SecondaryHeading>Happening</SecondaryHeading>
+      </IndexSectionOne>
     </Main>
   );
 }

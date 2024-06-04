@@ -1,0 +1,5 @@
+.article {
+  background-color: white;
+  grid-row: span 3;
+  padding: 1rem;
+}

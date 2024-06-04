@@ -1,6 +1,11 @@
 :root {
   --primery-color: rgb(60, 171, 146);
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 html {
   font-size: 10px;
 }
@@ -17,4 +22,26 @@ body {
 }
 .menu-icon-bottom {
   display: none;
+}
+.fitImage {
+  background-color: yellow;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fitImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+.thertiaryHeadings {
+  padding: 3rem 2rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  -webkit-hyphens: auto; /* Safari, Chrome, and other WebKit/Blink browsers */
+  -ms-hyphens: auto; /* Internet Explorer/Edge */
+  hyphens: auto !important; /* Standard */
 }

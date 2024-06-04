@@ -1,0 +1,16 @@
+.indexSectionOne {
+  height: 120vh;
+  padding: 10rem 0rem;
+}
+
+.indexSectionOne :global(.container) {
+  height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); /* Light bottom shadow */
+}
+.grid {
+  background-color: yellow;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
