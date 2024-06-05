@@ -38,10 +38,18 @@ body {
 }
 
 .thertiaryHeadings {
-  padding: 3rem 2rem;
   font-size: 1.5rem;
-  line-height: 2.5rem;
+  line-height: 2.2rem;
   -webkit-hyphens: auto; /* Safari, Chrome, and other WebKit/Blink browsers */
   -ms-hyphens: auto; /* Internet Explorer/Edge */
   hyphens: auto !important; /* Standard */
+}
+.btn-primary {
+  border: none;
+  font-weight: 900;
+  color: white;
+  border-radius: 2px;
+  background-color: var(--primery-color);
+  padding: 1rem 1.4rem;
+  cursor: pointer;
 }
