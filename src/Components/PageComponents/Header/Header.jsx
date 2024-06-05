@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
@@ -5,6 +6,7 @@ export default function Header() {
     <header>
       <HeaderTop />
       <Navigation />
+      <NavButtons />
     </header>
   );
 }
@@ -56,5 +58,20 @@ function Navigation() {
         <span className="material-symbols-outlined"> clear_night </span>
       </div>
     </nav>
+  );
+}
+
+function NavButtons() {
+  return (
+    <>
+      <nav className="pageNav">
+        <NavLink to={`articles`}>
+          <li className="pageNav__items">Articles</li>
+        </NavLink>
+        <NavLink to="authors">
+          <li className="pageNav__items">Authors</li>
+        </NavLink>
+      </nav>
+    </>
   );
 }
