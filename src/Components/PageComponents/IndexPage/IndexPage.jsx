@@ -3,17 +3,21 @@ import SecondaryHeading from "../UtilityComponents/SecondaryHeading";
 import IndexSectionOne from "./IndexSectionOne/IndexSectionOne";
 import IndexSectionThree from "./IndexSectionThree/IndexSectionThree";
 import IndexSectionTwo from "./IndexSectionTwo/IndexSectionTwo";
+import data from "../../../Data/Informations";
+
+const datas = data();
 
 function IndexPage() {
+  console.log(datas.slice(4, 7));
   return (
     <Main>
-      <IndexSectionOne>
+      <IndexSectionOne info={datas.slice(0, 3)}>
         <SecondaryHeading>Happening</SecondaryHeading>
       </IndexSectionOne>
-      <IndexSectionTwo>
+      <IndexSectionTwo info={datas.slice(4, 7)}>
         <SecondaryHeading>Conversation With Maneesh Narayan</SecondaryHeading>
       </IndexSectionTwo>
-      <IndexSectionThree>
+      <IndexSectionThree info={datas.slice(7, 15)}>
         <SecondaryHeading>The Cue Studio</SecondaryHeading>
       </IndexSectionThree>
     </Main>

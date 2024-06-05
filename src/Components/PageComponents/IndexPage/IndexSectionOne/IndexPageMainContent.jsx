@@ -1,19 +1,22 @@
+import { Link } from "react-router-dom";
 import styles from "./IndexPageMainContent.module.css";
-function IndexPageMainContent({ children: image }) {
+
+function IndexPageMainContent({ children: image, info }) {
   return (
     <article className={styles.article}>
-      {image}
-      <button className="btn-primary">Details</button>
-      <h3
-        className="thertiaryHeadings"
-        style={{ fontSize: "2rem", lineHeight: "3rem" }}
-      >
-        നമ്മുടെ സൂപ്പർ താരങ്ങൾ പോലും സ്ഥിരതയുള്ള അവസ്ഥയിലല്ല: ധ്യാൻ ശ്രീനിവാസൻ
-        അഭിമുഖം
-      </h3>
-      <span className={styles.author}>
-        വി.ഡി.സതീശന്‍ 2 hours ago 1 min read
-      </span>
+      <Link to={`article?id=${0}`}>
+        <div className={styles.subContents}>
+          {image}
+          <button className="btn-primary">{info[0].btnContent}</button>
+          <h3
+            className="thertiaryHeadings"
+            style={{ fontSize: "2rem", lineHeight: "3rem" }}
+          >
+            {info[0].heading}
+          </h3>
+        </div>
+      </Link>
+      <span className={styles.author}>{info[0].author}</span>
     </article>
   );
 }
