@@ -16,6 +16,7 @@ body {
 }
 section {
   margin: 12rem 0rem;
+
   display: block;
 }
 .container {
@@ -44,7 +45,7 @@ section {
 .thertiaryHeadings {
   font-size: 1.5rem;
   font-weight: 900;
-  line-height: 2.5rem;
+  line-height: 2.2rem;
   -webkit-hyphens: auto; /* Safari, Chrome, and other WebKit/Blink browsers */
   -ms-hyphens: auto; /* Internet Explorer/Edge */
   hyphens: auto !important; /* Standard */
@@ -62,7 +63,7 @@ section {
   cursor: pointer;
   display: block;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: transparent;
   color: gray;
   padding: 1rem 2rem;
   border: 2px solid gray;

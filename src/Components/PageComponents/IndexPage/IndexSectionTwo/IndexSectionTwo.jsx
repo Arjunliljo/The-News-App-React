@@ -41,6 +41,7 @@ function IndexSectionTwo({ children: heading }) {
           </SectionTwoContentBox>
         </div>
       </div>
+      <button className="section-btn">Read More</button>
     </section>
   );
 }
