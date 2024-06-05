@@ -1,11 +1,11 @@
 .indexSectionOne {
   height: 120vh;
-  padding: 5rem 0rem;
+  /* padding: 5rem 0rem; */
 }
 
 .indexSectionOne :global(.container) {
   height: 100%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); /* Light bottom shadow */
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);  */
 }
 .grid {
   height: 80%;

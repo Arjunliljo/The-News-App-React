@@ -10,6 +10,9 @@ function IndexPageMainContent({ children: image }) {
         നമ്മുടെ സൂപ്പർ താരങ്ങൾ പോലും സ്ഥിരതയുള്ള അവസ്ഥയിലല്ല: ധ്യാൻ ശ്രീനിവാസൻ
         അഭിമുഖം
       </h3>
+      <span className={styles.author}>
+        വി.ഡി.സതീശന്‍ 2 hours ago 1 min read
+      </span>
     </article>
   );
 }

@@ -51,6 +51,7 @@ function IndexSectionOne({ children }) {
           </IndexPageSubContents>
         </div>
       </div>
+      <button className="section-btn">Read More</button>
     </section>
   );
 }
