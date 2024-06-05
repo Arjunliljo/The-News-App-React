@@ -18,7 +18,7 @@ function IndexSectionOne({ children }) {
           </IndexPageMainContent>
           <IndexPageSubContents
             heading="കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി"
-            btnContent="Around Us"
+            btnContent="Details"
             author="വി.ഡി.സതീശന്‍ 2 hours ago 1 min read"
           >
             <Image
@@ -29,7 +29,7 @@ function IndexSectionOne({ children }) {
           </IndexPageSubContents>
           <IndexPageSubContents
             heading="കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി"
-            btnContent="Around Us"
+            btnContent="Details"
             author="വി.ഡി.സതീശന്‍ 2 hours ago 1 min read"
           >
             <Image
@@ -40,7 +40,7 @@ function IndexSectionOne({ children }) {
           </IndexPageSubContents>
           <IndexPageSubContents
             heading="കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി"
-            btnContent="Around Us"
+            btnContent="Details"
             author="വി.ഡി.സതീശന്‍ 2 hours ago 1 min read"
           >
             <Image

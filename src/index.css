@@ -19,6 +19,11 @@ section {
 
   display: block;
 }
+span,
+img,
+h3 {
+  cursor: pointer;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -62,7 +67,7 @@ section {
 .section-btn {
   cursor: pointer;
   display: block;
-  margin: 0 auto;
+  margin: 5rem auto;
   background-color: transparent;
   color: gray;
   padding: 1rem 2rem;
