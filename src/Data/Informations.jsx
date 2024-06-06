@@ -249,7 +249,7 @@ const informationsArr = [
 
 function informations() {
   const lengthCorrector = (str) => {
-    return str.split(" ").slice(0, 40).concat(".".repeat(3)).join(" ");
+    return str.split(" ").slice(0, 50).concat(".".repeat(3)).join(" ");
   };
 
   const datas = informationsArr.map((obj) => ({

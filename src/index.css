@@ -45,16 +45,16 @@ h3 {
 }
 .fitImage {
   background-color: yellow;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .fitImage img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-position: center;
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-position: center !important;
 }
 
 .thertiaryHeadings {

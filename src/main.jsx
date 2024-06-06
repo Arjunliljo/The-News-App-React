@@ -13,6 +13,7 @@ import Article from "./Components/ArticlesComponents/Article.jsx";
 import Authors from "./Components/AuthorComponents/Authors.jsx";
 import Author from "./Components/AuthorComponents/Author.jsx";
 import IndexPage from "./Components/PageComponents/IndexPage/IndexPage.jsx";
+import ContactUsPage from "./Components/PageComponents/UtilityComponents/ContactUsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         element: <Navigate replace to="/articles" />,
       },
       {
-        path: "/articles",
+        path: "articles",
         element: <IndexPage />,
       },
       {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "authors/:authorId",
         element: <Author />,
+      },
+      {
+        path: "contact",
+        element: <ContactUsPage />,
       },
     ],
   },

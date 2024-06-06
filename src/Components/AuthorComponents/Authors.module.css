@@ -1,0 +1,22 @@
+.authorsSection {
+  width: 100%;
+}
+.authorsSection :global(.container) {
+}
+
+.grid {
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.grid > * {
+  border: 1px solid var(--primery-color);
+  padding: 3rem;
+  transition: 0.4s all;
+  border-radius: 1rem;
+}
+.grid > *:hover {
+  cursor: pointer;
+  background-color: rgb(185, 185, 185);
+}

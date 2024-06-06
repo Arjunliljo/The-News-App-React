@@ -1,7 +1,9 @@
 .authorContainer {
   display: flex;
   align-items: center;
-  justify-self: center;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
 }
 
 .imgBox {
@@ -13,6 +15,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  /* opacity: 0; */
 }
 
 .authorContainer :global(h3) {
