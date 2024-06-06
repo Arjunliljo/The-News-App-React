@@ -8,16 +8,15 @@ import data from "../../../Data/Informations";
 const datas = data();
 
 function IndexPage() {
-  console.log(datas.slice(4, 7));
   return (
     <Main>
-      <IndexSectionOne info={datas.slice(0, 3)}>
+      <IndexSectionOne info={datas.slice(0, 4)}>
         <SecondaryHeading>Happening</SecondaryHeading>
       </IndexSectionOne>
       <IndexSectionTwo info={datas.slice(4, 7)}>
         <SecondaryHeading>Conversation With Maneesh Narayan</SecondaryHeading>
       </IndexSectionTwo>
-      <IndexSectionThree info={datas.slice(7, 15)}>
+      <IndexSectionThree info={datas.slice(8, 16)}>
         <SecondaryHeading>The Cue Studio</SecondaryHeading>
       </IndexSectionThree>
     </Main>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Image from "../../UtilityComponents/Image";
 import SectionTwoContentBox from "../IndexSectionTwo/SectionTwoContentBox";
 import styles from "./IndexSectionThree.module.css";
@@ -9,15 +10,16 @@ function IndexSectionThree({ children: heading, info }) {
         {heading}
         <div className={styles.articleContainer}>
           {info.map((data) => (
-            <SectionTwoContentBox
-              heading={data.heading}
-              author={data.author}
-              btn={true}
-              btnText="Find Out More"
-              key={data.id}
-            >
-              <Image height="60%" width="100%" src={data.image} />
-            </SectionTwoContentBox>
+            <Link key={data.id} to={`article?id=${data.id}`}>
+              <SectionTwoContentBox
+                heading={data.heading}
+                author={data.author}
+                btn={true}
+                btnText="Find Out More"
+              >
+                <Image height="60%" width="100%" src={data.image} />
+              </SectionTwoContentBox>
+            </Link>
           ))}
         </div>
       </div>

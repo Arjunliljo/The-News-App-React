@@ -1,20 +1,41 @@
 import Main from "../PageComponents/UtilityComponents/Main";
 import Image from "../PageComponents/UtilityComponents/Image";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import information from "../../Data/Informations";
-
+import styles from "./Article.module.css";
+import Author from "../AuthorComponents/Author";
+import NotFoundPage from "../PageComponents/UtilityComponents/NotFoundPage";
 const data = information();
 
 function Article() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const id = Number(searchParams.get("id"));
 
-  const { image } = data[id];
+  if (!searchParams.get("id") || !data[id])
+    return (
+      <Main>
+        <NotFoundPage></NotFoundPage>
+      </Main>
+    );
+
+  const { image, description, authorImg } = data[id];
 
   return (
     <Main>
-      {" "}
-      <Image src={image} />
+      <section className={styles.articleSection}>
+        <div className="container">
+          <div className={styles.imageAuthor}>
+            <Image src={image} height="70%" width="100%" />
+            <Author data={data[id]} height="30%" gap="3rem" size="150px">
+              <Image src={authorImg} height="100%" width="100%" />
+            </Author>
+          </div>
+          <div className={styles.summery}>
+            <h2>Summery</h2>
+            <p>{description}</p>
+          </div>
+        </div>
+      </section>
     </Main>
   );
 }

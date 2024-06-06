@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./SectionTwoContentBox.module.css";
 function SectionTwoContentBox({
   children: image,
@@ -7,10 +7,8 @@ function SectionTwoContentBox({
   btn = false,
   btnText = "Click me",
 }) {
-  const navigate = useNavigate();
-
   return (
-    <article className={styles.article} onClick={() => {}}>
+    <article className={styles.article}>
       {image}
       {btn && <button className="btn-primary">{btnText}</button>}
       <h3 className="thertiaryHeadings">{heading}</h3>

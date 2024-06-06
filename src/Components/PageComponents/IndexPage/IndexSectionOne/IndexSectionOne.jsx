@@ -2,6 +2,7 @@ import Image from "../../UtilityComponents/Image";
 import IndexPageMainContent from "./IndexPageMainContent";
 import styles from "./IndexSectionOne.module.css";
 import IndexPageSubContents from "./IndexPageSubContents";
+import { Link } from "react-router-dom";
 
 function IndexSectionOne({ children, info }) {
   return (
@@ -13,11 +14,14 @@ function IndexSectionOne({ children, info }) {
             <Image height="70%" width="100%" src={info[0].image} />
           </IndexPageMainContent>
 
-          {info.map((data, i) => {
+          {info.map((data) => {
+            if (data.id === 0) return;
             return (
-              <IndexPageSubContents data={data} key={data.id}>
-                <Image height="100%" width="100%" src={data.image} />
-              </IndexPageSubContents>
+              <Link to={`article?id=${data.id}`} key={data.id}>
+                <IndexPageSubContents data={data}>
+                  <Image height="100%" width="100%" src={data.image} />
+                </IndexPageSubContents>
+              </Link>
             );
           })}
         </div>

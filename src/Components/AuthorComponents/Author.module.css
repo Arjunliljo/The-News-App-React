@@ -1,0 +1,26 @@
+.authorContainer {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.imgBox {
+  width: 40%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.authorContainer :global(h3) {
+  font-size: 2.2rem;
+}
+
+.authorContainer :global(p) {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
