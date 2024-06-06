@@ -14,16 +14,18 @@ function IndexSectionOne({ children, info }) {
             <Image height="70%" width="100%" src={info[0].image} />
           </IndexPageMainContent>
 
-          {info.map((data) => {
-            if (data.id === 0) return;
-            return (
-              <Link to={`article?id=${data.id}`} key={data.id}>
-                <IndexPageSubContents data={data}>
-                  <Image height="100%" width="100%" src={data.image} />
-                </IndexPageSubContents>
-              </Link>
-            );
-          })}
+          <div className={styles.subContents}>
+            {info.map((data) => {
+              if (data.id === 0) return;
+              return (
+                <Link to={`article?id=${data.id}`} key={data.id}>
+                  <IndexPageSubContents data={data}>
+                    <Image height="100%" width="100%" src={data.image} />
+                  </IndexPageSubContents>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
       <button className="section-btn">Read More</button>

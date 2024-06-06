@@ -18,6 +18,8 @@ body {
 }
 section {
   margin: 5rem 0rem;
+  padding: 0 2rem;
+  height: auto;
 }
 a {
   text-decoration: none;
@@ -31,7 +33,7 @@ h3 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+
   background-color: rgb(248, 248, 248);
 }
 .flex {

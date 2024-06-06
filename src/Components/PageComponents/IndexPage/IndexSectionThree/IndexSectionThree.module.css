@@ -1,5 +1,11 @@
 .articleContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  column-gap: 2rem;
+}
+@media (max-width: 767px) {
+  .articleContainer {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
 }

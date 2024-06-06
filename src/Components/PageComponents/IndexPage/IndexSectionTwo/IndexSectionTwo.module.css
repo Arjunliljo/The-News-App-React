@@ -1,5 +1,5 @@
 .sectionTwo {
-  height: 90vh !important;
+  min-height: 90vh;
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
@@ -19,4 +19,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+/* For smartphones in portrait and landscape */
+@media (max-width: 767px) {
+  .articlesContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem !important;
+  }
 }

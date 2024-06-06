@@ -1,5 +1,5 @@
 .indexSectionOne {
-  height: 120vh;
+  min-height: 120vh;
   /* padding: 5rem 0rem; */
   display: flex;
   flex-direction: column;
@@ -17,4 +17,19 @@
   row-gap: 1rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, calc(100% / 3));
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(6, calc(100% / 3)); */
+  }
+  .subContents {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
 }

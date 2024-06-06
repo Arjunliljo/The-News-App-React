@@ -8,12 +8,11 @@ import {
 
 import App from "./App.jsx";
 import "./index.css";
-import Articles from "./Components/ArticlesComponents/Articles.jsx";
 import Article from "./Components/ArticlesComponents/Article.jsx";
 import Authors from "./Components/AuthorComponents/Authors.jsx";
-import Author from "./Components/AuthorComponents/Author.jsx";
 import IndexPage from "./Components/PageComponents/IndexPage/IndexPage.jsx";
 import ContactUsPage from "./Components/PageComponents/UtilityComponents/ContactUsPage.jsx";
+import AuthorPage from "./Components/AuthorComponents/AuthorPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,12 +32,16 @@ const router = createBrowserRouter([
         element: <Article />,
       },
       {
+        path: "articles/article/:authorId",
+        element: <AuthorPage />,
+      },
+      {
         path: "authors",
         element: <Authors />,
       },
       {
         path: "authors/:authorId",
-        element: <Author />,
+        element: <AuthorPage />,
       },
       {
         path: "contact",

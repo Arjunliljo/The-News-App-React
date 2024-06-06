@@ -12,3 +12,9 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
+/* For smartphones in portrait and landscape */
+@media (max-width: 767px) {
+  .article {
+    grid-row: span 1;
+  }
+}

@@ -1,5 +1,6 @@
 import data from "../../Data/Informations";
 import Image from "../PageComponents/UtilityComponents/Image";
+import Main from "../PageComponents/UtilityComponents/Main";
 import Author from "./Author";
 import styles from "./Authors.module.css";
 
@@ -19,17 +20,19 @@ function Authors() {
   }, []);
 
   return (
-    <section className={styles.authorsSection}>
-      <div className="container">
-        <div className={styles.grid}>
-          {authors.map((obj, i) => (
-            <Author data={authors[i]} key={authors.id} size="100px">
-              <Image src={obj.authorImg} height="100%" width="100%" />
-            </Author>
-          ))}
+    <Main>
+      <section className={styles.authorsSection}>
+        <div className="container">
+          <div className={styles.grid}>
+            {authors.map((obj, i) => (
+              <Author data={authors[i]} key={i} size="100px">
+                <Image src={obj.authorImg} height="100%" width="100%" />
+              </Author>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Main>
   );
 }
 

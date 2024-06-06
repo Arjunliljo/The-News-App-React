@@ -26,9 +26,11 @@ function Article() {
         <div className="container">
           <div className={styles.imageAuthor}>
             <Image src={image} height="70%" width="100%" />
-            <Author data={data[id]} height="30%" gap="3rem" size="150px">
-              <Image src={authorImg} height="100%" width="100%" />
-            </Author>
+            <div>
+              <Author data={data[id]} gap="3rem" size="150px">
+                <Image src={authorImg} height="100%" width="100%" />
+              </Author>
+            </div>
           </div>
           <div className={styles.summery}>
             <h2>Summery</h2>
