@@ -22,19 +22,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <IndexPage />,
+        element: <Navigate to="articles" />,
       },
-      {
-        path: "/articles",
-        element: <IndexPage />,
-      },
+      { path: "articles", element: <IndexPage /> },
       {
         path: "articles/:articleId",
         element: <Article />,
       },
-
       {
-        path: "articles/article/:authorId",
+        path: "articles/article/:articleId",
         element: <AuthorPage />,
       },
       {
@@ -49,11 +45,11 @@ const router = createBrowserRouter([
         path: "contact",
         element: <ContactUsPage />,
       },
-      {
-        path: "*",
-        element: <NotFoundPage />,
-      },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);
 
