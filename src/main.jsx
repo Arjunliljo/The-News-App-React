@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="articles" />,
+        element: <Navigate to={"articles"} />,
       },
       {
         path: "articles",
@@ -32,6 +32,7 @@ const router = createBrowserRouter([
         path: "articles/:articleId",
         element: <Article />,
       },
+
       {
         path: "articles/article/:authorId",
         element: <AuthorPage />,
