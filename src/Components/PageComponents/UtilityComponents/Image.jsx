@@ -10,8 +10,6 @@ function Image({
       style={{
         minWidth: width,
         minHeight: height,
-        maxHeight: height,
-        maxWidth: width,
       }}
       className={`fitImage ${className}`}
     >

@@ -3,6 +3,10 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
 }
+.imgBox {
+  height: 25rem;
+  overflow: hidden;
+}
 @media (max-width: 767px) {
   .articleContainer {
     grid-template-columns: 1fr;

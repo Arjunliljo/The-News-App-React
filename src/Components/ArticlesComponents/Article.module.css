@@ -1,5 +1,5 @@
 .articleSection :global(.container) {
-  height: 80vh;
+  min-height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -24,4 +24,11 @@
   flex-direction: column;
   gap: 3rem;
   max-height: 75vh;
+}
+
+@media (max-width: 767px) {
+  .articleSection :global(.container) {
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
 }

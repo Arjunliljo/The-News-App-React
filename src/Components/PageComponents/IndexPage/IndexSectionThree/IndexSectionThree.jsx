@@ -17,7 +17,9 @@ function IndexSectionThree({ children: heading, info }) {
                 btn={true}
                 btnText="Find Out More"
               >
-                <Image height="60%" width="100%" src={data.image} />
+                <div className={styles.imgBox}>
+                  <Image src={data.image} />
+                </div>
               </SectionTwoContentBox>
             </Link>
           ))}

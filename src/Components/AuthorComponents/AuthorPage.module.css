@@ -3,7 +3,12 @@
 }
 .section :global(.container) {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .author :global(h3) {
   font-size: 4rem;

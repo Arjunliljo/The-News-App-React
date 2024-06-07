@@ -1,7 +1,7 @@
 const informationsArr = [
   {
     id: 0,
-    author: "വി.ഡി.സതീശന്‍",
+    author: "V D Satheeshan",
     heading:
       "കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി",
     btnContent: "Opinion",
@@ -16,45 +16,45 @@ const informationsArr = [
   },
   {
     id: 1,
-    author: "വി.ഡി.സതീശന്‍",
+    author: "MODI",
     heading:
       "കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി",
     btnContent: "Opinion",
     image:
-      "https://cf-images.assettype.com/thecue%2F2024-06%2F49f32df1-735a-4d3f-87e5-3a3c69dd0a35%2F305347496_5379339808850249_1206039958414631759_n.jpg?w=640&auto=format%2Ccompress&fit=max",
+      "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTGIG8pRXrNGpPS2rXRx3E03TFhDQYWFMB6iaHOuwLcsZIWjFADGiZKT64UcX94a7tD4P0aDH9ZnEXXVOY",
 
     authorImg:
-      "https://cf-images.assettype.com/thecue%2F2021-08%2Fd4adee60-8dc1-4875-b7c3-7a686ef7fd2e%2F217594384_4306264986099100_3829301722842913054_n.jpg?w=250&auto=format%2Ccompress",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQrCrgH44eHRUn4fFbsMK4_mpXhMQsJydmPg&s",
 
     description:
       "ജനവിരുദ്ധ സര്‍ക്കാരിന്റെ മുഖത്തേറ്റ പ്രഹരമാണ് യു.ഡി.എഫിന് അനുകൂലമായ ജനവിധി. സംസ്ഥാന സര്‍ക്കാരിനെ ജനങ്ങള്‍ എത്രമാത്രം വെറുക്കുന്നു എന്നതിന്റെ പ്രതിഫലനം തിരഞ്ഞെടുപ്പ് ഫലത്തിലുണ്ട്. സര്‍ക്കാരിന്റെ വീഴ്ചകളും ജനദ്രോഹ നടപടികളും തുറന്നു കാട്ടുന്നതില്‍ യു.ഡി.എഫ് വിജയിച്ചു. കേരളത്തില്‍ എല്‍.ഡി.എഫിന് പ്രതീക്ഷിച്ച വിജയം നേടാനായില്ലെന്ന് സമ്മതിക്കുന്ന മുഖ്യമന്ത്രി അതിന്റെ കാരണങ്ങളെ കുറിച്ച് മിണ്ടുന്നില്ല. മാധ്യമങ്ങളുടെ മുന്നില്‍ വരാനോ ചോദ്യങ്ങളെ നേരിടാനോ മുഖ്യമന്ത്രി തയാറല്ല.",
   },
   {
     id: 2,
-    author: "വി.ഡി.സതീശന്‍",
+    author: "Amith sha",
     heading:
       "കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി",
     btnContent: "Opinion",
     image:
-      "https://cf-images.assettype.com/thecue%2F2024-06%2F49f32df1-735a-4d3f-87e5-3a3c69dd0a35%2F305347496_5379339808850249_1206039958414631759_n.jpg?w=640&auto=format%2Ccompress&fit=max",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIrueF-4WWp3NsthuOZc2OtsujL7IkbuJk7eB9xaWRLxM5Jd7o",
 
     authorImg:
-      "https://cf-images.assettype.com/thecue%2F2021-08%2Fd4adee60-8dc1-4875-b7c3-7a686ef7fd2e%2F217594384_4306264986099100_3829301722842913054_n.jpg?w=250&auto=format%2Ccompress",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcduMUlOHh0XuvlO-wkW4S6NjC1rFW0lMn-A&s",
 
     description:
       "ജനവിരുദ്ധ സര്‍ക്കാരിന്റെ മുഖത്തേറ്റ പ്രഹരമാണ് യു.ഡി.എഫിന് അനുകൂലമായ ജനവിധി. സംസ്ഥാന സര്‍ക്കാരിനെ ജനങ്ങള്‍ എത്രമാത്രം വെറുക്കുന്നു എന്നതിന്റെ പ്രതിഫലനം തിരഞ്ഞെടുപ്പ് ഫലത്തിലുണ്ട്. സര്‍ക്കാരിന്റെ വീഴ്ചകളും ജനദ്രോഹ നടപടികളും തുറന്നു കാട്ടുന്നതില്‍ യു.ഡി.എഫ് വിജയിച്ചു. കേരളത്തില്‍ എല്‍.ഡി.എഫിന് പ്രതീക്ഷിച്ച വിജയം നേടാനായില്ലെന്ന് സമ്മതിക്കുന്ന മുഖ്യമന്ത്രി അതിന്റെ കാരണങ്ങളെ കുറിച്ച് മിണ്ടുന്നില്ല. മാധ്യമങ്ങളുടെ മുന്നില്‍ വരാനോ ചോദ്യങ്ങളെ നേരിടാനോ മുഖ്യമന്ത്രി തയാറല്ല.",
   },
   {
     id: 3,
-    author: "വി.ഡി.സതീശന്‍",
+    author: "Suresh Gopi",
     heading:
       "കോണ്‍ഗ്രസ് മുക്ത കേരളത്തിന് ശ്രമിച്ച പിണറായിയുടെ ദുഷ്പ്രചരണത്തിന് കിട്ടിയ തിരിച്ചടി",
     btnContent: "Opinion",
     image:
-      "https://cf-images.assettype.com/thecue%2F2024-06%2F49f32df1-735a-4d3f-87e5-3a3c69dd0a35%2F305347496_5379339808850249_1206039958414631759_n.jpg?w=640&auto=format%2Ccompress&fit=max",
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSCddn98SkJyF_ZkhoIh6vHMeAf2SxmBwyHVU_gfUwkGFNBUaZJ",
 
     authorImg:
-      "https://cf-images.assettype.com/thecue%2F2021-08%2Fd4adee60-8dc1-4875-b7c3-7a686ef7fd2e%2F217594384_4306264986099100_3829301722842913054_n.jpg?w=250&auto=format%2Ccompress",
+      "https://th-i.thgim.com/public/incoming/dqucs8/article67335186.ece/alternates/FREE_1200/IMG_suresh_gopi_2_1_85AK1EHC.jpg",
 
     description:
       "ജനവിരുദ്ധ സര്‍ക്കാരിന്റെ മുഖത്തേറ്റ പ്രഹരമാണ് യു.ഡി.എഫിന് അനുകൂലമായ ജനവിധി. സംസ്ഥാന സര്‍ക്കാരിനെ ജനങ്ങള്‍ എത്രമാത്രം വെറുക്കുന്നു എന്നതിന്റെ പ്രതിഫലനം തിരഞ്ഞെടുപ്പ് ഫലത്തിലുണ്ട്. സര്‍ക്കാരിന്റെ വീഴ്ചകളും ജനദ്രോഹ നടപടികളും തുറന്നു കാട്ടുന്നതില്‍ യു.ഡി.എഫ് വിജയിച്ചു. കേരളത്തില്‍ എല്‍.ഡി.എഫിന് പ്രതീക്ഷിച്ച വിജയം നേടാനായില്ലെന്ന് സമ്മതിക്കുന്ന മുഖ്യമന്ത്രി അതിന്റെ കാരണങ്ങളെ കുറിച്ച് മിണ്ടുന്നില്ല. മാധ്യമങ്ങളുടെ മുന്നില്‍ വരാനോ ചോദ്യങ്ങളെ നേരിടാനോ മുഖ്യമന്ത്രി തയാറല്ല.",
@@ -109,8 +109,10 @@ const informationsArr = [
     author: "അനൂപ് മേനോൻ",
     heading: "മോഹൻലാലിന്റെ പുതിയ സിനിമയുടെ ഷൂട്ടിങ് ആരംഭിച്ചു",
     btnContent: "Learn more",
-    image: "https://via.placeholder.com/500",
-    authorImg: "https://via.placeholder.com/150",
+    image:
+      "https://static.toiimg.com/thumb/imgsize-23456,msid-83277245,width-600,resizemode-4/83277245.jpg",
+    authorImg:
+      "https://m.media-amazon.com/images/M/MV5BOWUwZTU4MmUtZjQ0OC00ZTYyLWI2NjctNzkwMzA2ZTFhOWM1XkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_.jpg",
     description:
       "മോഹൻലാൽ നായകനാകുന്ന പുതിയ ചിത്രത്തിന്റെ ഷൂട്ടിങ് എറണാകുളത്ത് ആരംഭിച്ചു. ചിത്രം സംവിധാനം ചെയ്യുന്നത് പ്രശസ്ത സംവിധായകൻ സത്യൻ അന്തിക്കാട് ആണ്. സിനിമ ഒരു കുടുംബ കഥയാണ് അവതരിപ്പിക്കുന്നത്. മോഹൻലാൽക്ക് ഒപ്പം മഞ്ജു വാര്യരും പ്രധാന വേഷം ചെയ്യുന്നു.സിനിമ എന്നത് കോമൺസെൻസാണ് എന്ന് നടനും സംവിധായകനുമായ ധ്യാൻ ശ്രീനിവാസൻ. തിര എന്ന ചിത്രത്തിൽ ക്ലാപ് അടിച്ചതിന്റെ അറിവ് വച്ചിട്ടാണ് ബേസിൽ കുഞ്ഞിരാമായണം.",
   },
@@ -119,8 +121,10 @@ const informationsArr = [
     author: "മഞ്ജു വാര്യർ",
     heading: "ആൻഡ്രോയിഡ് കുട്ടപ്പന് 2-ലെ ഫസ്റ്റ് ലുക്ക് പോസ്റ്റർ പുറത്തിറക്കി",
     btnContent: "Discover more",
-    image: "https://via.placeholder.com/500",
-    authorImg: "https://via.placeholder.com/150",
+    image:
+      "https://static.toiimg.com/thumb/imgsize-23456,msid-106991379,width-600,resizemode-4/106991379.jpg",
+    authorImg:
+      "https://static.toiimg.com/thumb/imgsize-23456,msid-106991379,width-600,resizemode-4/106991379.jpg",
     description:
       "ആൻഡ്രോയിഡ് കുട്ടപ്പന് 2-ലെ ഫസ്റ്റ് ലുക്ക് പോസ്റ്റർ പ്രേക്ഷകർക്കായി പുറത്തിറക്കി. ഈ സിനിമയുടെ ആദ്യ ഭാഗം വലിയ വിജയമായിരുന്നു. രണ്ടാം ഭാഗത്തിലും സൂറജ് വെഞ്ഞാറമൂടും, സൗബിൻ ഷാഹിറും മുഖ്യവേഷങ്ങളിൽ എത്തുന്നു. സിനിമ സംവിധാനം ചെയ്യുന്നത് പ്രശസ്ത സംവിധായകൻ രതീഷ് ബാലകൃഷ്ണൻ പോധുവാൾ ആണ്.സിനിമ എന്നത് കോമൺസെൻസാണ് എന്ന് നടനും സംവിധായകനുമായ ധ്യാൻ ശ്രീനിവാസൻ. തിര എന്ന ചിത്രത്തിൽ ക്ലാപ് അടിച്ചതിന്റെ അറിവ് വച്ചിട്ടാണ് ബേസിൽ കുഞ്ഞിരാമായണം എന്ന സിനിമ ചെയ്യുന്നത് എന്നും 2015 ലെ ഓണം വിന്നറായിരുന്നു ആ ചിത്രമെന്നും ധ്യാൻ പറയുന്നു.",
   },
