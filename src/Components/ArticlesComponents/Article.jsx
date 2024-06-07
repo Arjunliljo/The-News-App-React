@@ -5,7 +5,7 @@ import information from "../../Data/Informations";
 import styles from "./Article.module.css";
 import Author from "../AuthorComponents/Author";
 import NotFoundPage from "../PageComponents/UtilityComponents/NotFoundPage";
-const data = information();
+const data = JSON.parse(information());
 
 function Article() {
   const [searchParams] = useSearchParams();

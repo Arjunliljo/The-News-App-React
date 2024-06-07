@@ -5,7 +5,7 @@ import informations from "../../Data/Informations";
 import Image from "../PageComponents/UtilityComponents/Image";
 import Author from "./Author";
 
-const data = informations();
+const data = JSON.parse(informations());
 
 function AuthorPage() {
   const [searchParams] = useSearchParams();

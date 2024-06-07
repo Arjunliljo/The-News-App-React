@@ -5,7 +5,7 @@ import IndexSectionThree from "./IndexSectionThree/IndexSectionThree";
 import IndexSectionTwo from "./IndexSectionTwo/IndexSectionTwo";
 import data from "../../../Data/Informations";
 
-const datas = data();
+const datas = JSON.parse(data());
 
 function IndexPage() {
   return (

@@ -261,7 +261,9 @@ function informations() {
     description: lengthCorrector(obj.description),
   }));
 
-  return datas;
+  const parsed = JSON.stringify(datas);
+
+  return parsed;
 }
 
 export default informations;
