@@ -13,6 +13,7 @@ import Authors from "./Components/AuthorComponents/Authors.jsx";
 import IndexPage from "./Components/PageComponents/IndexPage/IndexPage.jsx";
 import ContactUsPage from "./Components/PageComponents/UtilityComponents/ContactUsPage.jsx";
 import AuthorPage from "./Components/AuthorComponents/AuthorPage.jsx";
+import NotFoundPage from "./Components/PageComponents/UtilityComponents/NotFoundPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactUsPage />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
       },
     ],
   },
