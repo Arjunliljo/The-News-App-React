@@ -7,7 +7,7 @@ import styles from "./Authors.module.css";
 function Authors() {
   const unique = new Set();
 
-  const authors = data().reduce((acc, obj) => {
+  const authors = JSON.parse(data()).reduce((acc, obj) => {
     if (!unique.has(obj.author)) {
       acc.push({
         author: obj.author,
