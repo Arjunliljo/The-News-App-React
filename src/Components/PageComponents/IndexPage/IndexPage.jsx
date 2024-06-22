@@ -3,13 +3,11 @@ import SecondaryHeading from "../UtilityComponents/SecondaryHeading";
 import IndexSectionOne from "./IndexSectionOne/IndexSectionOne";
 import IndexSectionThree from "./IndexSectionThree/IndexSectionThree";
 import IndexSectionTwo from "./IndexSectionTwo/IndexSectionTwo";
-import data from "../../../Data/Informations";
-
-
-
-const datas = JSON.parse(data());
+import { useSelector } from "react-redux";
 
 function IndexPage() {
+  const { data: datas } = useSelector((state) => state.dataSet);
+
   return (
     <Main>
       <IndexSectionOne info={datas.slice(0, 4)}>

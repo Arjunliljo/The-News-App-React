@@ -4,10 +4,12 @@ import styles from "./AuthorPage.module.css";
 import informations from "../../Data/Informations";
 import Image from "../PageComponents/UtilityComponents/Image";
 import Author from "./Author";
+import { useSelector } from "react-redux";
 
-const data = JSON.parse(informations());
 
 function AuthorPage() {
+  const { data } = useSelector((state) => state.dataSet);
+
   const [searchParams] = useSearchParams();
 
   const id = searchParams.get("id");

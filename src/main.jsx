@@ -5,7 +5,7 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import { Provider } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 
 import App from "./App.jsx";
 import "./index.css";
@@ -19,11 +19,26 @@ import Login from "./Components/PageComponents/LoginSignUp/Login.jsx";
 import SignIn from "./Components/PageComponents/LoginSignUp/SignIn.jsx";
 import store from "./App/store.js";
 import AddNews from "./Components/PageComponents/IndexPage/AddNews.jsx";
+import axios from "axios";
+
+const BASE_URL = import.meta.env.VITE_URL;
+
+export async function loader() {
+  try {
+    await axios.get(`${BASE_URL}/auth/verify`, { withCredentials: true });
+    return true;
+  } catch (error) {
+    const data = error.response;
+    console.log(data);
+    return false;
+  }
+}
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader,
     children: [
       {
         index: true,

@@ -60,7 +60,10 @@ function Navigation() {
     e.preventDefault();
 
     try {
-      await axios.get(`${BASE_URL}/auth/logout`);
+      const res = await axios.get(`${BASE_URL}/auth/logout`, {
+        withCredentials: true,
+      });
+      console.log(res);
       dispatch(setIsLoggedIn(false));
       console.log("LoggedOut");
     } catch (error) {

@@ -1,13 +1,15 @@
 import Main from "../PageComponents/UtilityComponents/Main";
 import Image from "../PageComponents/UtilityComponents/Image";
-import { Link, useSearchParams } from "react-router-dom";
-import information from "../../Data/Informations";
+import { useSearchParams } from "react-router-dom";
 import styles from "./Article.module.css";
 import Author from "../AuthorComponents/Author";
 import NotFoundPage from "../PageComponents/UtilityComponents/NotFoundPage";
-const data = JSON.parse(information());
+import { useSelector } from "react-redux";
 
 function Article() {
+  const { data } = useSelector((state) => state.dataSet);
+  console.log(data);
+
   const [searchParams] = useSearchParams();
   const id = Number(searchParams.get("id"));
 

@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateData } from "../../../App/Login/dataSlice";
+import { useNavigate } from "react-router-dom";
 
 function AddNews() {
   const [title, setTitle] = useState("");
@@ -7,9 +10,23 @@ function AddNews() {
   const [category, setCategory] = useState("");
   const [keywords, setKeywords] = useState("");
   const [description, setDecription] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const id = useSelector((state) => state.dataSet.data.at(-1).id);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const data = {
+      title,
+      image_url,
+      creator,
+      category,
+      keywords,
+      description,
+      id: id + 1,
+    };
+    dispatch(updateData(data));
+    navigate("/articles");
   };
 
   return (
