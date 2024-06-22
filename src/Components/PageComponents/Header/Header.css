@@ -69,3 +69,9 @@
 .active {
   background-color: rgb(0, 107, 121) !important;
 }
+.functionality ul {
+  display: flex;
+  list-style: none;
+  text-wrap: nowrap;
+  gap: 2rem;
+}

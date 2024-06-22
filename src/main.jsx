@@ -5,6 +5,7 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import { Provider } from "react-redux";
 
 import App from "./App.jsx";
 import "./index.css";
@@ -14,6 +15,10 @@ import IndexPage from "./Components/PageComponents/IndexPage/IndexPage.jsx";
 import ContactUsPage from "./Components/PageComponents/UtilityComponents/ContactUsPage.jsx";
 import AuthorPage from "./Components/AuthorComponents/AuthorPage.jsx";
 import NotFoundPage from "./Components/PageComponents/UtilityComponents/NotFoundPage.jsx";
+import Login from "./Components/PageComponents/LoginSignUp/Login.jsx";
+import SignIn from "./Components/PageComponents/LoginSignUp/SignIn.jsx";
+import store from "./App/store.js";
+import AddNews from "./Components/PageComponents/IndexPage/AddNews.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +50,18 @@ const router = createBrowserRouter([
         path: "contact",
         element: <ContactUsPage />,
       },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "SignIn",
+        element: <SignIn />,
+      },
+      {
+        path: "addnews",
+        element: <AddNews />,
+      },
     ],
   },
   {
@@ -55,6 +72,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

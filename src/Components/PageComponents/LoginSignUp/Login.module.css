@@ -1,0 +1,59 @@
+.login {
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 2rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.8rem;
+  color: var(--color-light--1);
+  /* Different from other form */
+  max-width: 48rem;
+  margin: 8rem auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signup {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.signup span {
+  font-size: 1.6rem;
+  text-wrap: nowrap;
+  color: var(--color-light--2);
+}
+.notFound {
+  color: red;
+}
+.form label {
+  font-weight: 500;
+}
+.form input {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    margin: 0;
+    height: 100vh;
+    padding: 1rem;
+  }
+}

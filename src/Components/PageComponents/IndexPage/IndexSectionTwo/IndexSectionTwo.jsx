@@ -11,8 +11,7 @@ function IndexSectionTwo({ children: heading, info }) {
         <div className={styles.articlesContainer}>
           {info.map((data, i) => {
             return (
-              <Link to={`article?id=${data.id}`}>
-                
+              <Link to={`article?id=${data.id}`} key={data.id}>
                 <SectionTwoContentBox
                   heading={data.heading}
                   author={data.author}

@@ -1,6 +1,15 @@
 :root {
   --primery-color: rgb(60, 171, 146);
   --secondary-color: rgb(196, 206, 57);
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
 }
 * {
   padding: 0;
@@ -87,4 +96,59 @@ h3 {
 }
 .author {
   margin: 4rem 0;
+}
+
+.formContainer {
+  font-size: 1.8rem;
+  max-width: 900px;
+  margin: 5rem auto;
+}
+
+.addForm {
+  background-color: var(--color-dark--0);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addForm div {
+  margin-bottom: 15px;
+}
+
+.addForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--color-light--1);
+}
+
+.addForm input[type="text"],
+.addForm input[type="email"],
+.addForm textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--color-light--3);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--color-light--1);
+}
+
+.addForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.addForm button[type="submit"] {
+  background-color: var(--primery-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addForm button[type="submit"]:hover {
+  background-color: var(--secondary-color);
 }

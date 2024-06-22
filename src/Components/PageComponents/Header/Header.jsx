@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
+import Button from "../UtilityComponents/Button";
 
 export default function Header() {
   return (
@@ -36,6 +37,15 @@ function HeaderTop() {
 }
 
 function Navigation() {
+  const navigate = useNavigate();
+
+  const handleAddNews = () => {
+    navigate("addnews");
+  };
+  const handleLogin = () => {
+    navigate("login");
+  };
+
   return (
     <nav className="navigations">
       {/* <!-- menu icon bottom--> */}
@@ -44,19 +54,26 @@ function Navigation() {
       </div>
 
       <ul className="nav-ul">
-        <li className="nav-ul__items">Videos</li>
+        {/* <li className="nav-ul__items">Videos</li>
         <li className="nav-ul__items">Opinion</li>
         <li className="nav-ul__items">Newsroom</li>
         <li className="nav-ul__items">Cue Studio</li>
         <li className="nav-ul__items">Movie Review</li>
         <li className="nav-ul__items">Editor's Pick</li>
         <li className="nav-ul__items">Brand Stories</li>
-        <li className="nav-ul__items">About Us</li>
+        <li className="nav-ul__items">About Us</li> */}
       </ul>
 
-      <div className="nav-ul__moon-icon">
-        <span className="material-symbols-outlined"> clear_night </span>
-      </div>
+      <nav className="functionality">
+        <ul>
+          <li onClick={handleAddNews}>
+            <Button type="secondary">Add Article</Button>
+          </li>
+          <li onClick={handleLogin}>
+            <Button type="secondary">Login</Button>
+          </li>
+        </ul>
+      </nav>
     </nav>
   );
 }
