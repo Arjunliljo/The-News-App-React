@@ -30,10 +30,10 @@ export default function Login() {
 
     try {
       await axios.post(`${BASE_URL}/auth/login`, data);
-      console.log("logged In");
       dispatch(setIsLoggedIn(true));
+      navigate("/articles");
     } catch (error) {
-      console.log(error);
+      setError("invalid username or password");
       dispatch(setIsLoggedIn(false));
     } finally {
       setIsLoading(false);
@@ -60,7 +60,6 @@ export default function Login() {
             value={userName}
             required
           />
-          {error && <span className={styles.notFound}>Invalid User Name</span>}
         </div>
 
         <div className={styles.row}>
@@ -72,11 +71,12 @@ export default function Login() {
             value={password}
             required
           />
-          {error && <span className={styles.notFound}>Invalid Password</span>}
         </div>
-
+        {error && <span style={{ color: "red" }}>{error}</span>}
         <div>
-          <Button type="primary">Login</Button>
+          <Button type="primary" disabled={isLoading ? "disabled" : ""}>
+            Login
+          </Button>
         </div>
       </form>
       <div className={styles.signup}>
