@@ -1,6 +1,11 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
 import Button from "../UtilityComponents/Button";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { setIsLoggedIn } from "../../../App/Login/LoginSlice";
+
+const BASE_URL = import.meta.env.VITE_URL;
 
 export default function Header() {
   return (
@@ -39,11 +44,28 @@ function HeaderTop() {
 function Navigation() {
   const navigate = useNavigate();
 
-  const handleAddNews = () => {
+  const { isLoggedIn } = useSelector((state) => state.loginEvent);
+
+  const dispatch = useDispatch();
+
+  const handleAddNews = (e) => {
+    e.preventDefault();
     navigate("addnews");
   };
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     navigate("login");
+  };
+  const handleLogout = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.get(`${BASE_URL}/auth/logout`);
+      dispatch(setIsLoggedIn(false));
+      console.log("LoggedOut");
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -66,12 +88,20 @@ function Navigation() {
 
       <nav className="functionality">
         <ul>
-          <li onClick={handleAddNews}>
-            <Button type="secondary">Add Article</Button>
-          </li>
-          <li onClick={handleLogin}>
-            <Button type="secondary">Login</Button>
-          </li>
+          {isLoggedIn && (
+            <li onClick={handleAddNews}>
+              <Button type="secondary">Add Article</Button>
+            </li>
+          )}
+          {isLoggedIn ? (
+            <li onClick={handleLogout}>
+              <Button type="secondary">Logout</Button>
+            </li>
+          ) : (
+            <li onClick={handleLogin}>
+              <Button type="secondary">Login</Button>
+            </li>
+          )}
         </ul>
       </nav>
     </nav>

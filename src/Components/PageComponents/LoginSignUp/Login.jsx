@@ -29,7 +29,9 @@ export default function Login() {
     const data = { userName, password };
 
     try {
-      await axios.post(`${BASE_URL}/auth/login`, data);
+      await axios.post(`${BASE_URL}/auth/login`, data, {
+        withCredentials: true,
+      });
       dispatch(setIsLoggedIn(true));
       navigate("/articles");
     } catch (error) {
