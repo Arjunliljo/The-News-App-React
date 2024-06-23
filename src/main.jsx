@@ -23,22 +23,22 @@ import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_URL;
 
-export async function loader() {
-  try {
-    await axios.get(`${BASE_URL}/auth/verify`, { withCredentials: true });
-    return true;
-  } catch (error) {
-    const data = error.response;
-    console.error(data);
-    return false;
-  }
-}
+// export async function loader() {
+//   try {
+//     await axios.get(`${BASE_URL}/auth/verify`, { withCredentials: true });
+//     return true;
+//   } catch (error) {
+//     const data = error.response;
+//     console.error(data);
+//     return false;
+//   }
+// }
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader,
+    // loader,
     children: [
       {
         index: true,
