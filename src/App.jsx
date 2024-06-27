@@ -20,12 +20,12 @@ function App() {
   const isPathLogin = location.pathname.includes("login");
   const isPathSignIn = location.pathname.includes("SignIn");
 
-  // const login = useLoaderData();
+  const login = useLoaderData();
 
-  // useEffect(() => {
-  //   if (login) dispatch(setIsLoggedIn(true));
-  //   else dispatch(setIsLoggedIn(false));
-  // }, [login]);
+  useEffect(() => {
+    if (login) dispatch(setIsLoggedIn(true));
+    else dispatch(setIsLoggedIn(false));
+  }, [login]);
 
   useEffect(() => {
     if (isPathLogin) dispatch(setIsLogginPage(true));

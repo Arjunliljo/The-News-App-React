@@ -91,11 +91,11 @@ function Navigation() {
 
       <nav className="functionality">
         <ul>
-          {isLoggedIn && (
+          {/* {isLoggedIn && (
             <li onClick={handleAddNews}>
               <Button type="secondary">Add Article</Button>
             </li>
-          )}
+          )} */}
           {isLoggedIn ? (
             <li onClick={handleLogout}>
               <Button type="secondary">Logout</Button>
