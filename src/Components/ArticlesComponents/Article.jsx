@@ -36,6 +36,7 @@ function Article() {
           </div>
           <div className={styles.summery}>
             <h2>Summery</h2>
+            {/* description */}
             <p>{description}</p>
           </div>
         </div>
