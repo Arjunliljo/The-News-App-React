@@ -1,7 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import Main from "../PageComponents/UtilityComponents/Main";
 import styles from "./AuthorPage.module.css";
-import informations from "../../Data/Informations";
 import Image from "../PageComponents/UtilityComponents/Image";
 import Author from "./Author";
 import { useSelector } from "react-redux";
