@@ -3,6 +3,7 @@ import Image from "../PageComponents/UtilityComponents/Image";
 import Main from "../PageComponents/UtilityComponents/Main";
 import Author from "./Author";
 import styles from "./Authors.module.css";
+import { useLoaderData } from "react-router-dom";
 
 function Authors() {
   const unique = new Set();

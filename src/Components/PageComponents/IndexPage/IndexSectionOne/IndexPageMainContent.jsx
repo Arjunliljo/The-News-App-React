@@ -4,7 +4,7 @@ import styles from "./IndexPageMainContent.module.css";
 function IndexPageMainContent({ children: image, info }) {
   return (
     <article className={styles.article}>
-      <Link to={`article?id=${0}`}>
+      <Link to={`article?id=${info[0].id}`}>
         <div className={styles.subContents}>
           {image}
           <button className="btn-primary">{info[0].btnContent}</button>

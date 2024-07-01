@@ -5,10 +5,7 @@ import Button from "../UtilityComponents/Button";
 import styles from "./Login.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import {
-  setIsLogginPage,
-  setIsSignInPage,
-} from "../../../App/Login/LoginSlice";
+import { setIsLogginPage, setIsSignInPage } from "../../../App/LoginSlice";
 import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_URL;

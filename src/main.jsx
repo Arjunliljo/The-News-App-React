@@ -24,14 +24,29 @@ import axios from "axios";
 const BASE_URL = import.meta.env.VITE_URL;
 
 export async function loader() {
+  let isLoggedIn = false;
+  let articles = [];
+  let authors = [];
+
   try {
     await axios.get(`${BASE_URL}/auth/verify`, { withCredentials: true });
-    return true;
+    isLoggedIn = true;
   } catch (error) {
-    const data = error.response;
-    console.error(data);
-    return false;
+    console.log(error.message);
   }
+
+  try {
+    const articesData = await axios.get(`${BASE_URL}/articles`);
+    articles = [...articesData.data];
+
+    const authorsData = await axios.get(`${BASE_URL}/authors`);
+    authors = [...authorsData.data];
+    console.log(articles);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  return { isLoggedIn, articles, authors };
 }
 
 const router = createBrowserRouter([

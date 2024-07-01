@@ -11,8 +11,9 @@ import {
   setIsLoggedIn,
   setIsLogginPage,
   setIsSignInPage,
-} from "./App/Login/LoginSlice";
+} from "./App/LoginSlice";
 import { useEffect } from "react";
+import { updateData } from "./App/dataSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,12 +21,14 @@ function App() {
   const isPathLogin = location.pathname.includes("login");
   const isPathSignIn = location.pathname.includes("SignIn");
 
-  const login = useLoaderData();
+  const { isLoggedIn, articles, authors } = useLoaderData();
+
+  dispatch(updateData(articles, authors));
 
   useEffect(() => {
-    if (login) dispatch(setIsLoggedIn(true));
+    if (isLoggedIn) dispatch(setIsLoggedIn(true));
     else dispatch(setIsLoggedIn(false));
-  }, [login]);
+  }, [isLoggedIn]);
 
   useEffect(() => {
     if (isPathLogin) dispatch(setIsLogginPage(true));
@@ -34,8 +37,6 @@ function App() {
     if (isPathSignIn) dispatch(setIsSignInPage(true));
     else dispatch(setIsSignInPage(false));
   }, [isPathLogin, isPathSignIn]);
-
-  const { isLoggedIn } = useSelector((state) => state.loginEvent);
 
   return (
     <>

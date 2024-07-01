@@ -8,7 +8,7 @@ import {
   setIsLoggedIn,
   setIsLogginPage,
   setIsSignInPage,
-} from "../../../App/Login/LoginSlice";
+} from "../../../App/LoginSlice";
 import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_URL;

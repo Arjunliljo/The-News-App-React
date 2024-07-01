@@ -3,7 +3,7 @@ import "./Header.css";
 import Button from "../UtilityComponents/Button";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { setIsLoggedIn } from "../../../App/Login/LoginSlice";
+import { setIsLoggedIn } from "../../../App/LoginSlice";
 
 const BASE_URL = import.meta.env.VITE_URL;
 

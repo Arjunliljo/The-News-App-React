@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateData } from "../../../App/Login/dataSlice";
+import { updateData } from "../../../App/dataSlice";
 import { useNavigate } from "react-router-dom";
 
 function AddNews() {

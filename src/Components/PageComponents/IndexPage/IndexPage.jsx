@@ -16,9 +16,9 @@ function IndexPage() {
       <IndexSectionTwo info={datas.slice(4, 7)}>
         <SecondaryHeading>Conversation With Maneesh Narayan</SecondaryHeading>
       </IndexSectionTwo>
-      <IndexSectionThree info={datas.slice(8, 16)}>
+      {/* <IndexSectionThree info={datas.slice(8, 16)}>
         <SecondaryHeading>The Cue Studio</SecondaryHeading>
-      </IndexSectionThree>
+      </IndexSectionThree> */}
     </Main>
   );
 }
