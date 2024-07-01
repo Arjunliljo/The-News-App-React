@@ -8,7 +8,6 @@ import { useSelector } from "react-redux";
 
 function Article() {
   const { data } = useSelector((state) => state.dataSet);
-  console.log(data);
 
   const [searchParams] = useSearchParams();
   const id = Number(searchParams.get("id"));
@@ -29,14 +28,14 @@ function Article() {
           <div className={styles.imageAuthor}>
             <Image src={image} height="70%" width="100%" />
             <div>
-              <Author data={data[id]} gap="3rem" size="150px">
+              <Author data={data[id]} gap="3rem" size="150px" disbled={true}>
                 <Image src={authorImg} height="100%" width="100%" />
               </Author>
             </div>
           </div>
           <div className={styles.summery}>
             <h2>Summery</h2>
-            {/* description */}
+
             <p>{description}</p>
           </div>
         </div>

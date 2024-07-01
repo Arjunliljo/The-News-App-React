@@ -16,8 +16,8 @@ function Author({
     <Link
       to={
         !disbled
-          ? `author?id=${data?.id}`
-          : `https://en.wikipedia.org/wiki/${data.author}`
+          ? `/authors/author?id=${data?._id}`
+          : `https://en.wikipedia.org/wiki/${data?.author}`
       }
     >
       <article
@@ -29,7 +29,7 @@ function Author({
         </div>
 
         <div>
-          {/* <p>Author :-</p> */}
+          <p>Author :-</p>
           <button className="btn-primary">Author</button>
           <h3>{data?.author}</h3>
         </div>

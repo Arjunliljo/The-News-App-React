@@ -41,7 +41,6 @@ export async function loader() {
 
     const authorsData = await axios.get(`${BASE_URL}/authors`);
     authors = [...authorsData.data];
-    console.log(articles);
   } catch (error) {
     console.log(error.message);
   }

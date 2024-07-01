@@ -6,20 +6,22 @@ import styles from "./Authors.module.css";
 import { useLoaderData } from "react-router-dom";
 
 function Authors() {
-  const unique = new Set();
-  const { data } = useSelector((state) => state.dataSet);
+  const { authors } = useSelector((state) => state.dataSet);
+  //old code before backend
+  // const unique = new Set();
+  // const datas = useSelector((state) => state.dataSet);
 
-  const authors = data.reduce((acc, obj) => {
-    if (!unique.has(obj.author)) {
-      acc.push({
-        author: obj.author,
-        authorImg: obj.authorImg,
-        id: obj.id,
-      });
-      unique.add(obj.author);
-    }
-    return acc;
-  }, []);
+  // const authors = data.reduce((acc, obj) => {
+  //   if (!unique.has(obj.author)) {
+  //     acc.push({
+  //       author: obj.author,
+  //       authorImg: obj.authorImg,
+  //       id: obj.id,
+  //     });
+  //     unique.add(obj.author);
+  //   }
+  //   return acc;
+  // }, []);
 
   return (
     <Main>

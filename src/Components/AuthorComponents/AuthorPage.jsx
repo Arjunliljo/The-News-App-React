@@ -6,14 +6,13 @@ import Image from "../PageComponents/UtilityComponents/Image";
 import Author from "./Author";
 import { useSelector } from "react-redux";
 
-
 function AuthorPage() {
-  const { data } = useSelector((state) => state.dataSet);
+  const { authors } = useSelector((state) => state.dataSet);
 
   const [searchParams] = useSearchParams();
 
   const id = searchParams.get("id");
-  const info = data[Number(id)];
+  const info = authors.find((author) => author._id === id);
 
   return (
     <Main>
