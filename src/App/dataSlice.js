@@ -32,9 +32,21 @@ const dataSlice = createSlice({
         state.data = [...action.payload.updatedArticles];
       },
     },
+
+    addData(state, action) {
+      state.data = [
+        { ...action.payload, id: state.data.length },
+        ...state.data,
+      ];
+      state.authors = [
+        ...state.authors,
+        { author: action.payload.author, authorImg: action.payload.authorImg },
+      ];
+      state.articles = [action.payload, ...state.articles];
+    },
   },
 });
 
-export const { updateData } = dataSlice.actions;
+export const { updateData, addData } = dataSlice.actions;
 
 export default dataSlice.reducer;

@@ -1,31 +1,43 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateData } from "../../../App/dataSlice";
+import { addData, updateData } from "../../../App/dataSlice";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+const BASE_URL = import.meta.env.VITE_URL;
 
 function AddNews() {
-  const [title, setTitle] = useState("");
-  const [image_url, setImage_url] = useState("");
-  const [creator, setCreator] = useState("");
-  const [category, setCategory] = useState("");
-  const [keywords, setKeywords] = useState("");
+  const [heading, setHeading] = useState("");
+  const [image, setImage] = useState("");
+  const [author, setAuthor] = useState("");
+  const [btnContent, setbtnContent] = useState("");
+  const [authorImg, setAuthorImg] = useState("");
   const [description, setDecription] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const id = useSelector((state) => state.dataSet.data.at(-1).id);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      title,
-      image_url,
-      creator,
-      category,
-      keywords,
+    const newArticle = {
+      heading,
+      image,
+      btnContent,
       description,
-      id: id + 1,
     };
-    dispatch(updateData(data));
+    const newAuthor = {
+      author,
+      authorImg,
+    };
+
+    try {
+      const articleData = await axios.post(`${BASE_URL}/articles`, newArticle);
+      const authorData = await axios.post(`${BASE_URL}/authors`, newAuthor);
+
+      dispatch(addData({ ...articleData.data, ...authorData.data }));
+    } catch (e) {
+      console.log(e.message);
+    }
+
     navigate("/articles");
   };
 
@@ -38,52 +50,52 @@ function AddNews() {
             type="text"
             id="title"
             name="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={heading}
+            onChange={(e) => setHeading(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor="image_url">Image URL:</label>
+          <label htmlFor="image">Image URL:</label>
           <input
             type="text"
-            id="image_url"
-            name="image_url"
-            value={image_url}
-            onChange={(e) => setImage_url(e.target.value)}
+            id="image"
+            name="image"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor="creator">Creator:</label>
+          <label htmlFor="creator">Author:</label>
           <input
             type="text"
             id="creator"
             name="creator"
-            value={creator}
-            onChange={(e) => setCreator(e.target.value)}
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor="category">Category:</label>
-          <input
-            type="text"
-            id="category"
-            name="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="keywords">Keywords:</label>
+          <label htmlFor="keywords">Author image:</label>
           <input
             type="text"
             id="keywords"
             name="keywords"
-            value={keywords}
-            onChange={(e) => setKeywords(e.target.value)}
+            value={authorImg}
+            onChange={(e) => setAuthorImg(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="btnContent">Catagory:</label>
+          <input
+            type="text"
+            id="btnContent"
+            name="btnContent"
+            value={btnContent}
+            onChange={(e) => setbtnContent(e.target.value)}
             required
           />
         </div>

@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function IndexPage() {
   const { data: datas } = useSelector((state) => state.dataSet);
-
+  console.log(datas);
   return (
     <Main>
       {datas.length ? (
@@ -26,7 +26,9 @@ function IndexPage() {
         </IndexSectionThree> */}
         </>
       ) : (
-        <h1 className="main-loading">Loading..</h1>
+        <div className="main-loading">
+          <h1>Loading..</h1>
+        </div>
       )}
     </Main>
   );
