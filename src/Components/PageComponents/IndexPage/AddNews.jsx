@@ -23,6 +23,7 @@ function AddNews() {
       image,
       btnContent,
       description,
+      author,
     };
     const newAuthor = {
       author,

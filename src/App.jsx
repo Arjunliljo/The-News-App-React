@@ -9,7 +9,7 @@ import { updateData } from "./App/dataSlice";
 function App() {
   const dispatch = useDispatch();
   const { isLoggedIn, articles, authors } = useLoaderData();
-
+  console.log(articles);
   useEffect(() => {
     dispatch(updateData(articles, authors));
 

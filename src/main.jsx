@@ -36,7 +36,9 @@ export async function loader() {
   }
 
   try {
-    const articesData = await axios.get(`${BASE_URL}/articles`);
+    const articesData = await axios.get(
+      `${BASE_URL}/articles?sort=-createdAt&limit=7`
+    );
     articles = [...articesData.data];
 
     const authorsData = await axios.get(`${BASE_URL}/authors`);
@@ -62,10 +64,6 @@ const router = createBrowserRouter([
       {
         path: "articles/:articleId",
         element: <Article />,
-      },
-      {
-        path: "articles/article/:articleId",
-        element: <AuthorPage />,
       },
       {
         path: "authors",

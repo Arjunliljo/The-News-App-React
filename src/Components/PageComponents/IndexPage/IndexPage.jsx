@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 function IndexPage() {
   const { data: datas } = useSelector((state) => state.dataSet);
-  console.log(datas);
   return (
     <Main>
       {datas.length ? (

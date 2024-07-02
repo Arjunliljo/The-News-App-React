@@ -5,6 +5,7 @@ import IndexPageSubContents from "./IndexPageSubContents";
 import { Link } from "react-router-dom";
 
 function IndexSectionOne({ children, info }) {
+  console.log(info, "from secitonONe");
   return (
     <section className={styles.indexSectionOne}>
       <div className="container">
@@ -15,8 +16,8 @@ function IndexSectionOne({ children, info }) {
           </IndexPageMainContent>
 
           <div className={styles.subContents}>
-            {info.map((data) => {
-              if (data.id === 0) return;
+            {info.map((data, i) => {
+              if (i === 0) return;
               return (
                 <Link to={`article?id=${data.id}`} key={data.id}>
                   <IndexPageSubContents data={data}>
